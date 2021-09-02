@@ -3,4 +3,3 @@
 def solution(string, ending):
     return ending == string[len(string)-len(ending):len(string)]
             
-print(solution("string", "eng"))
