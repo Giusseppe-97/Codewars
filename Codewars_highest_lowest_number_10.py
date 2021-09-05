@@ -15,3 +15,7 @@ def high_and_low(numbers):
     return str(maxi) +" "+ str(mini)
 
 print(high_and_low("-334 650 -814 -29 591 -702 -111 -747 461 20 386 70 -206 983 270"))
+
+def high_and_low_best(numbers): #z.
+    nn = [int(s) for s in numbers.split(" ")]
+    return "%i %i" % (max(nn),min(nn))
