@@ -7,6 +7,6 @@
 # You will only be given Natural Numbers as arguments.
 
 def series_sum(n):
-    return "{:.2f}".format(sum([(1/(3*i+1)) for i in range(0,n)]))
+    return "{:.2f}".format(sum([(1/(3*i+1)) for i in range(n)]))
 
-print(series_sum(0))
+#This time, mine was the best possible solution
