@@ -1,13 +1,17 @@
+# All numbers are valid Int32, no need to validate them.
+# There will always be at least one number in the input string.
+# Output string must be two numbers separated by a single space, and highest number is first.
 def high_and_low(numbers):
-    n= numbers.replace(" ","")
-    maxi = 0
-    mini = 0
-    for i in range(len(n)):
-        a = int(n)
-        if n[i]>maxi:
-            maxi == a[i]
-        if n[i]<mini:
-            mini == a[i]
-    return maxi, " ", mini
+    list = numbers.split(" ")
+    maxi = int(list[0])
+    mini = int(list[0])
+    for i in range(0, len(list)):
+        num = int(list[i])
+        if maxi<num:
+            maxi = num
+        elif mini>num:
+            mini = num
 
-print(high_and_low("1 2 3 4 5 6"))
+    return str(maxi) +" "+ str(mini)
+
+print(high_and_low("-334 650 -814 -29 591 -702 -111 -747 461 20 386 70 -206 983 270"))
