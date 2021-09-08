@@ -40,5 +40,3 @@ def rgb(r, g, b):
             cols[i] = "F" + "F"
 
     return cols[0] + cols[1] + cols[2]
-
-print(rgb(-20,275,125))
