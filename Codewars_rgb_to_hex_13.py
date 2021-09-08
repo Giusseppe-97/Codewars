@@ -1,4 +1,21 @@
 def rgb(r, g, b):
+    """
+    Return hex string representation of ``r,g,b`` values. A saturation \
+will be applied to the input values to ensure they are betweem 0 \
+and 255.
+    
+    :param r: Red channel
+    :type r: int 
+    
+    :param g: Green channel
+    :type g: int 
+    
+    :param b: Blue channel
+    :type b: int 
+    
+    :return: Hex representation.
+    :rtype: str
+    """
 
     colors = [r,g,b]
     cols = ["","",""]
