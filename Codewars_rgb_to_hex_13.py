@@ -1,22 +1,44 @@
 def rgb(r, g, b):
-    red = ""
-    green = ""
-    blue = ""
-    red_1 = r%16  
-    green_1 = g%16  
-    blue_1 = b%16 
 
-    red_16 = r//16  
-    green_16 = g//16  
-    blue_16 = b//16  
-    if red_16<9:
-        red = str(red_16) + str(red_1)
-    if green_16<9:
-        green = str(green_16) + str(green_1)
-        red = str(red_16) + str(red_1)
-    if blue_16<9:
-        blue = str(blue_16) + str(blue_1)
+    colors = [r,g,b]
+    cols = ["","",""]
+    for i in range(len(colors)):
+        
+        if colors[i]//16 == 10:
+            cols[i] = "A"
+        elif colors[i]//16 == 11:
+            cols[i] = "B"
+        elif colors[i]//16 == 12:
+            cols[i] = "C"
+        elif colors[i]//16 == 13:
+            cols[i] = "D"
+        elif colors[i]//16 == 14:
+            cols[i] = "E"
+        elif colors[i]//16 == 15:
+            cols[i] = "F"
+        else:
+            cols[i] = str(colors[i]//16) 
 
-    return red + green + blue
+        if colors[i]%16 == 10:
+            cols[i] = cols[i] + "A"
+        elif colors[i]%16 == 11:
+            cols[i] = cols[i] + "B"
+        elif colors[i]%16 == 12:
+            cols[i] = cols[i] + "C"
+        elif colors[i]%16 == 13:
+            cols[i] =  cols[i] + "D"
+        elif colors[i]%16 == 14:
+            cols[i] = cols[i] + "E"
+        elif colors[i]%16 == 15:
+            cols[i] = cols[i] + "F"
+        else: 
+            cols[i] = cols[i]  + str(colors[i]%16 )
 
-print(rgb(18,18,18))
+        if colors[i]<0:
+            cols[i] = str(0)+str(0)
+        elif colors[i]>255:
+            cols[i] = "F" + "F"
+
+    return cols[0] + cols[1] + cols[2]
+
+print(rgb(-20,275,125))
