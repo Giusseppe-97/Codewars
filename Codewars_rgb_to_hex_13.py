@@ -40,3 +40,7 @@ def rgb(r, g, b):
             cols[i] = "F" + "F"
 
     return cols[0] + cols[1] + cols[2]
+
+def rgb_best(r, g, b):
+    round = lambda x: min(255, max(x, 0))
+    return ("{:02X}" * 3).format(round(r), round(g), round(b))
