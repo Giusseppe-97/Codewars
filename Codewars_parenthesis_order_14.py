@@ -12,7 +12,11 @@
 def valid_parentheses(string):
     i=0
     while i != (len(string)):
-        if string[i] == ")":
+
+        if string[i] == "":
+            return True
+
+        elif string[i] == ")":
             break
         elif string[i]!= "(":
             i += 1
@@ -23,7 +27,7 @@ def valid_parentheses(string):
                 return True
     return False
 
-print(valid_parentheses(")()"))
+print(valid_parentheses("x()(j(y())))uy(()quc"))
 
 # test.assert_equals(valid_parentheses("  ("),False)
 # test.assert_equals(valid_parentheses(")test"),False)
