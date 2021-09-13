@@ -16,6 +16,7 @@ def valid_parentheses(string):
     for i in range(len(string)):
         if string[i]=="(" or string[i]==")":
             pare = pare + string[i]
+            
     if pare.count("(") == pare.count(")"):
         for j in range(len(pare)):
             if pare[j]=="(":
@@ -28,7 +29,6 @@ def valid_parentheses(string):
             return False
     else:
         return False
-         
     return True
 
 def valid_parentheses_best(string):
