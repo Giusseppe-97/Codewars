@@ -7,7 +7,7 @@
 #     if n%sr==0:
 #         return [sr, 2] 
 def isPP(n):
-    for i in range(2,n+1):
+    for i in range(2,n):
         sr = round(n ** (1/i),ndigits=10)
         if n%sr==0:
             return [int(sr), i]
