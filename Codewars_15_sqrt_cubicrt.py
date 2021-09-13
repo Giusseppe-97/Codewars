@@ -11,5 +11,12 @@ def isPP(n):
         sr = round(n ** (1/i),ndigits=10)
         if n%sr==0:
             return [int(sr), i]
-        
 
+from math import ceil, log, sqrt
+
+def isPP_best(n):
+    for b in xrange(2, int(sqrt(n)) + 1):
+        e = int(round(log(n, b)))
+        if b ** e == n:
+            return [b, e]
+    return None
