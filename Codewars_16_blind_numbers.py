@@ -1,10 +1,18 @@
 def blind_number(n):
     m = 3**(n)
-    lis = []
     a = "0"*n
-    print(a)
+    lis = [a]
+    for i in range(n):
+        # print('{num:01d}'.format(num=i))
+        for j in range(n):
+            print('{num:02d}'.format(num=j))
 
+    # for i in range(1,3):
+    #     for j in range(n):
+    #         r=a[j]
+    #         lis.append(str(r))
+    
 
+    # print(lis)
 
-
-print(blind_number(9))
+print(blind_number(3))
