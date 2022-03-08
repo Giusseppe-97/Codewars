@@ -1,11 +1,12 @@
 
 import pandas as pd
 import seaborn as sns
+import matplotlib.pyplot as plt
 
 def matrix_correlation_generator():
     # Step 0 - Read the dataset, calculate column correlations and make a seaborn heatmap
 
-    data = pd.read_excel('C:\Users\josep\Documents\GitHub\Voice_cloning\NISQA\Example_trials_audios.xlsx')
+    data = pd.read_csv(r'C:/Users/josep/Documents/GitHub/Voice_cloning/NISQA/Example_trials_audios/Correlations_mos.csv')
 
     corr = data.corr()
     ax = sns.heatmap(
@@ -19,8 +20,8 @@ def matrix_correlation_generator():
         rotation=45,
         horizontalalignment='right'
     )
+    
          
-    return ax
+    return plt.show()
 
-print("ax")
 print(matrix_correlation_generator())
