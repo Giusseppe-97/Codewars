@@ -93,6 +93,7 @@ def concatenate_several(left, right):
     Returns
     -------
     results : pd.merge(left,right,how=join method)
+    join method (str): inner, outer, right left or cross 
     """
     
     results = pd.merge(
